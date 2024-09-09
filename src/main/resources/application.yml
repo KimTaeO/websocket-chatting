@@ -13,3 +13,13 @@ spring:
     username: root
     password: qwer1234
     driver-class-name: com.mysql.cj.jdbc.Driver
+
+  redis:
+    host: localhost
+    port: 6379
+
+jwt:
+  access-secret: 1wNcH7ZaDZUxFZF6BNh7paYhgXCxwBTHePd4MPTNZ/c=
+  refresh-secret: 3L42/isPL1JnmDeC9fqRowDpXQwqmMZmbg6sXae5u+M=
+  access-expiration: 900
+  refresh-expiration: 86400
