@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController
 class ChatController(
     private val simpMessageSendingOperations: SimpMessageSendingOperations
 ) {
-    @MessageMapping("/hello")
+    @MessageMapping("/ws/chat")
     fun sendMessage(chatMessageDto: ChatMessageDto) {
         simpMessageSendingOperations.convertAndSend("/sub", chatMessageDto)
     }
