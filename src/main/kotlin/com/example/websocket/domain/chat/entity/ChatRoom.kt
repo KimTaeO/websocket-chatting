@@ -1,22 +1,18 @@
-package com.example.websocket.domain.chatroom.entity
+package com.example.websocket.domain.chat.entity
 
 import com.example.websocket.domain.user.entity.User
 import javax.persistence.*
 
 @Entity
-class Message(
+class ChatRoom(
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     val id: Long,
 
     @Column
-    val message: String,
+    val title: String,
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id", nullable = false)
-    val user: User,
-
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "chatroom_id", nullable = false)
-    val chatRoom: ChatRoom
+    val user: User
 )

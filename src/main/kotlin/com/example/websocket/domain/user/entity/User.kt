@@ -1,10 +1,7 @@
 package com.example.websocket.domain.user.entity
 
-import javax.persistence.Column
-import javax.persistence.Entity
-import javax.persistence.GeneratedValue
-import javax.persistence.GenerationType
-import javax.persistence.Id
+import com.example.websocket.domain.user.enum.Authority
+import javax.persistence.*
 
 @Entity
 class User(
@@ -19,5 +16,8 @@ class User(
     val email: String,
 
     @Column
-    val password: String
+    val password: String,
+
+    @Enumerated(EnumType.STRING)
+    val authority: Authority
 )
