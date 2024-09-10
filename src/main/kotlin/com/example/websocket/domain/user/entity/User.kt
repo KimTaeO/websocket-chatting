@@ -1,13 +1,13 @@
 package com.example.websocket.domain.user.entity
 
 import com.example.websocket.domain.user.enum.Authority
+import java.util.UUID
 import javax.persistence.*
 
 @Entity
 class User(
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    val id: Long,
+    val id: UUID,
 
     @Column
     val name: String,
